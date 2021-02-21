@@ -15,6 +15,8 @@ void playerfirst();
 void playersecond();
 void boardchange(int, int, int, int);
 void beginingboard();
+int whitecheck(int, int);
+int blackcheck(int, int);
 
 int whitepawnstatus[8] = {0, 0, 0, 0, 0, 0, 0, 0}; //**
 int blackpawnstatus[8] = {0, 0, 0, 0, 0, 0, 0, 0};
