@@ -7,7 +7,7 @@ void display_start_board();
 // Вывод начальной доски
 void display_start_board()
 {
-     char board[8][8]
+    char board[8][8]
             = {{'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'},
                {'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'},
                {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
@@ -35,6 +35,6 @@ void display_start_board()
 
 int main()
 {
-display_start_board();
-return 0;
+    display_start_board();
+    return 0;
 }
