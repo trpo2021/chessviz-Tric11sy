@@ -4,6 +4,8 @@
 #define width 8
 void display_start_board();
 void pawn(int x1, int y1, int x2, int y2);
+enum file { FILE_A, FILE_B, FILE_C, FILE_D, FILE_E, FILE_F, FILE_G, FILE_H, FILE_NONE };
+enum rank { RANK_1, RANK_2, RANK_3, RANK_4, RANK_5, RANK_6, RANK_7, RANK_8, RANK_NONE };
 enum board_squares {
 A1 = 21, B1, C1, D1, E1, F1, G1, H1,
 A2 = 31, B2, C2, D2, E2, F2, G2, H2,
