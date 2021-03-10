@@ -2,10 +2,13 @@
 #include <stdlib.h>
 #define height 8
 #define width 8
+#define board_squares_num 120
+typedef unsigned long long U64;
 void display_start_board();
 void pawn(int x1, int y1, int x2, int y2);
 enum file { FILE_A, FILE_B, FILE_C, FILE_D, FILE_E, FILE_F, FILE_G, FILE_H, FILE_NONE };
 enum rank { RANK_1, RANK_2, RANK_3, RANK_4, RANK_5, RANK_6, RANK_7, RANK_8, RANK_NONE };
+enum color { WHITE, BLACK, BOTH};
 enum board_squares {
 A1 = 21, B1, C1, D1, E1, F1, G1, H1,
 A2 = 31, B2, C2, D2, E2, F2, G2, H2,
@@ -17,7 +20,27 @@ A7 = 81, B7, C7, D7, E7, F7, G7, H7,
 A8 = 91, B8, C8, D8, E8, F8, G8, H8, NO_SQ
 };
 
+enum { FALSE, TRUE };
+typedef struct {
+    int pieces[board_squares_num];
+    U64 pawns[3];
 
+    int king_sq[2];
+
+    int side;
+    int en_pas;
+    int fifty_move;
+
+    int ply;
+    int his_ply;
+
+    U64  key_position;
+    
+    int number_of_paces;[13];
+    int maj_paces[3]           
+    int max_paces[3]          // rooks and queens
+    int min_paces[3]          // bishop and knights
+}
 // Вывод начальной доски
 void display_start_board()
 {
