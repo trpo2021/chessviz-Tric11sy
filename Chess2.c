@@ -3,6 +3,8 @@
 #define height 8
 #define width 8
 #define board_squares_num 120
+#define maxgamemoves 2000
+
 typedef unsigned long long U64;
 void display_start_board();
 void pawn(int x1, int y1, int x2, int y2);
@@ -42,7 +44,7 @@ typedef struct {
     int maj_paces[3]           
     int max_paces[3]          // rooks and queens
     int min_paces[3]          // bishop and knights
-}
+} s_board;
 // Вывод начальной доски
 void display_start_board()
 {
