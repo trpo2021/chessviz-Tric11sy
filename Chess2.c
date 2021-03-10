@@ -21,6 +21,7 @@ A8 = 91, B8, C8, D8, E8, F8, G8, H8, NO_SQ
 };
 
 enum { FALSE, TRUE };
+enum {white_ling_castling = 1, white_queen_castling = 2, black_king_castling = 4, black_queen_castling = 8};
 typedef struct {
     int pieces[board_squares_num];
     U64 pawns[3];
@@ -33,6 +34,7 @@ typedef struct {
 
     int ply;
     int his_ply;
+    int castle_perm;
 
     U64  key_position;
     
